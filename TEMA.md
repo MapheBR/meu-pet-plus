@@ -10,7 +10,7 @@ seu animal de estimação: **vacinas, consultas e peso**.
 ## Identidade visual (definida pelo aluno)
 
 - **Logo**: nome "MeuPet+" com elementos de cachorro, gato e patinha
-  (`Logo MeuPet+ com Cães e Gatos.png`, mesma pasta deste arquivo).
+  (`prototipo/logo.png`, usada no `prototipo/telas.html`).
 - **Slogan**: "Cuidado, amor e bem-estar sempre!"
 - **Personalidade**: confiança, carinho, qualidade e proximidade.
 - **Paleta**:
@@ -53,8 +53,8 @@ o app e responder rápido: "a vacina do filhote está em dia?",
 
 ## Telas (protótipo aprovado — 15 telas)
 
-Wireframe visual autocontido em `prototipo/telas.html` (abrir no
-navegador; logo em base64 e ícones SVG — funciona offline).
+Wireframe visual em `prototipo/telas.html` (abrir no navegador junto
+com `prototipo/logo.png`; ícones Material Icons via CDN).
 Identidade: azul-marinho `#102D59`, laranja `#FF9100`, off-white
 `#F8F7F3`, Poppins (títulos) + Inter (texto), Material-style icons.
 
