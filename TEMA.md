@@ -94,6 +94,6 @@ na Home (cadastra pet) e em cada aba do pet (cadastra o registro).
 
 - [x] Definir o tema
 - [x] Protótipo das telas (`prototipo/telas.html`)
-- [ ] Design system + sample app
+- [x] Design system + sample app (`packages/design_system` + `example/` galeria)
 - [ ] Documentação da API (requests e responses)
 - [ ] Seguir padrões de projeto da disciplina (MVVM + Factory + Coordinator)

@@ -1,0 +1,24 @@
+/// Design system of the MeuPet+ app: tokens, theme and components.
+library;
+
+export 'src/components/app_avatar.dart';
+export 'src/components/app_button.dart';
+export 'src/components/app_scaffold.dart';
+export 'src/components/app_text_field.dart';
+export 'src/components/bottom_nav.dart';
+export 'src/components/gap.dart';
+export 'src/components/info_card.dart';
+export 'src/components/pet_card.dart';
+export 'src/components/pet_tabs.dart';
+export 'src/components/section_header.dart';
+export 'src/components/settings_tile.dart';
+export 'src/components/state_view.dart';
+export 'src/components/status_chip.dart';
+export 'src/components/weight_chart.dart';
+export 'src/theme/app_semantic_colors.dart';
+export 'src/theme/app_theme.dart';
+export 'src/tokens/app_colors.dart';
+export 'src/tokens/app_durations.dart';
+export 'src/tokens/app_radius.dart';
+export 'src/tokens/app_spacing.dart';
+export 'src/tokens/app_typography.dart';
