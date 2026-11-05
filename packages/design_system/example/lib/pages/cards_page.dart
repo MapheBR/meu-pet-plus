@@ -128,7 +128,10 @@ class _TabsDemo extends StatelessWidget {
       length: PetTabs.labels.length,
       child: Column(
         children: [
-          PetTabs(controller: DefaultTabController.of(context)),
+          Builder(
+            builder: (context) =>
+                PetTabs(controller: DefaultTabController.of(context)),
+          ),
           const SizedBox(height: AppSpacing.sm),
           SizedBox(
             height: 120,

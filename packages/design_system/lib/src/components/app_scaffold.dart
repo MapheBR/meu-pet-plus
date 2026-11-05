@@ -113,26 +113,17 @@ class AppScaffold extends StatelessWidget {
 
     return AppBar(
       automaticallyImplyLeading: false,
-      titleSpacing: 0,
-      title: Row(
-        children: [
-          if (hasBack) ...[
-            IconButton(
+      leading: hasBack
+          ? IconButton(
               icon: const Icon(Icons.arrow_back),
               tooltip: 'Voltar',
               onPressed: () => Navigator.of(context).maybePop(),
-            ),
-          ],
-          Expanded(
-            child: Text(
-              title ?? '',
-              style: AppTypography.titleMedium.copyWith(
-                color: scheme.onSurface,
-              ),
-              overflow: TextOverflow.ellipsis,
-            ),
-          ),
-        ],
+            )
+          : null,
+      title: Text(
+        title ?? '',
+        style: AppTypography.titleMedium.copyWith(color: scheme.onSurface),
+        overflow: TextOverflow.ellipsis,
       ),
       actions: actions,
     );
