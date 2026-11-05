@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MeuPet+ — Protótipo de telas</title>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#102D59;--or:#FF9100;--bg:#F8F7F3;--ok:#2E9E5B;--err:#D32F2F;--tx:#1d2433;--mut:#5d6677;--ln:#e3dfd3}
+*{box-sizing:border-box;margin:0;padding:0;font-family:Inter,'Segoe UI',Arial,sans-serif}
+body{background:#0b1f3d;color:#F8F7F3;padding:32px 24px 64px}
+h1,h2,h3,.t,.top b{font-family:Poppins,Inter,sans-serif}
+h1{font-size:24px}.sub{color:#b9c6d8;font-size:14px;margin:4px 0 28px}
+.flow{display:flex;flex-wrap:wrap;gap:40px}
+section{width:320px}
+h3{font-size:15px;margin-top:12px}
+p.n{color:#c8d4e4;font-size:13px;line-height:1.5;margin-top:4px}
+.mi{font-family:'Material Icons';font-style:normal;font-size:22px;line-height:1}
+.ph{width:320px;height:640px;border:3px solid #06142b;border-radius:32px;background:var(--bg);color:var(--tx);position:relative;display:flex;flex-direction:column;overflow:hidden}
+.sb{display:flex;justify-content:space-between;align-items:center;font-size:12px;padding:10px 20px 4px;background:var(--navy);color:#cfd9e8}
+.sb.lt{background:#dbe5f2;color:var(--mut)}
+.sb span{display:flex;gap:3px}.sb .mi{font-size:14px}
+.top{background:var(--navy);color:#fff;display:flex;align-items:center;gap:10px;padding:6px 14px 12px;min-height:54px}
+.top b{font-size:16px}.top small{display:block;font-size:12px;color:#b9c6d8;font-family:Inter,sans-serif;font-weight:400}
+.lg{width:36px;height:36px;flex:none}
+img.lg{object-fit:contain;background:#fff;border-radius:9px}
+.bd{flex:1;padding:14px;display:flex;flex-direction:column;gap:10px;overflow:hidden}
+.bd.t0{padding-top:0}
+.t{font-size:18px;color:var(--navy);font-weight:700}
+.cd{background:#fff;border:1px solid var(--ln);border-radius:12px;padding:12px;display:flex;gap:12px;align-items:center;font-size:14px}
+.cd b{color:var(--navy)}
+.cd small{display:block;color:var(--mut);font-size:12px;margin-top:2px}
+.ic{width:40px;height:40px;border-radius:12px;background:#eaf0f9;color:var(--navy);display:flex;align-items:center;justify-content:center;flex:none}
+.av{width:48px;height:48px;border-radius:50%;border:2px solid var(--or);background:#fff;color:var(--navy);display:flex;align-items:center;justify-content:center;flex:none}
+.ch{display:inline-flex;align-items:center;gap:3px;border-radius:20px;padding:3px 9px;font-size:12px;font-weight:600;white-space:nowrap;margin-top:6px}
+.ch .mi{font-size:14px}
+.ch.ok{background:#e4f5ec;color:#1e7a44}.ch.wn{background:#fff1da;color:#a85a00}.ch.er{background:#fde6e6;color:#b3261e}
+.fl{display:flex;flex-direction:column;gap:4px;font-size:12px;font-weight:600;color:var(--navy)}
+.in{height:44px;border:1.5px solid #d3cfc2;border-radius:10px;background:#fff;display:flex;align-items:center;gap:8px;padding:0 12px;font-weight:400;color:#8a90a0;font-size:14px}
+.in .mi{color:var(--navy);font-size:20px}
+.seg{display:flex;gap:8px}.seg div{flex:1;height:44px;border-radius:10px;border:1.5px solid #d3cfc2;background:#fff;display:flex;align-items:center;justify-content:center;gap:6px;font-size:14px;font-weight:400;color:var(--mut)}
+.seg .on{border-color:var(--navy);background:#eaf0f9;color:var(--navy);font-weight:600}
+.bt{height:48px;border-radius:12px;background:var(--or);color:var(--navy);display:flex;align-items:center;justify-content:center;gap:6px;font-weight:700;font-size:15px}
+.bt.dk{background:var(--navy);color:#fff}
+.bt.out{background:#fff;border:1.5px solid var(--err);color:var(--err)}
+.ft{padding:12px 14px}
+.fab{position:absolute;right:16px;bottom:78px;width:56px;height:56px;border-radius:50%;background:var(--or);color:var(--navy);display:flex;align-items:center;justify-content:center;box-shadow:0 4px 10px rgba(16,45,89,.35)}
+.fab .mi{font-size:28px}
+.nav{display:flex;background:#fff;border-top:1px solid var(--ln);padding:8px 0 12px}
+.ni{flex:1;display:flex;flex-direction:column;align-items:center;gap:2px;font-size:12px;color:#7d8596}
+.ni .mi{font-size:24px}.ni.on{color:var(--navy);font-weight:600}.ni.on .mi{color:var(--or)}
+.tabs{display:flex;background:#fff;border-bottom:1.5px solid var(--ln);margin:0 -14px}
+.tab{flex:1;text-align:center;font-size:12px;padding:12px 0;color:#7d8596}
+.tab.on{color:var(--navy);font-weight:600;border-bottom:3px solid var(--or)}
+.sw{width:42px;height:24px;border-radius:12px;background:var(--or);position:relative;margin-left:auto;flex:none}
+.sw:after{content:"";position:absolute;right:2px;top:2px;width:20px;height:20px;border-radius:50%;background:#fff}
+.sw.off{background:#c9ccd4}.sw.off:after{right:auto;left:2px}
+.sk{background:linear-gradient(90deg,#ece9df,#f6f4ee,#ece9df);border-radius:8px;height:12px}
+.lb{font-size:12px;color:var(--mut);font-weight:600}
+.ctr{text-align:center;flex-direction:column;justify-content:center}
+.ctr .mi{font-size:36px;color:var(--navy)}
+.big{font-family:Poppins,sans-serif;font-size:28px;font-weight:700;color:var(--navy)}
+.tk{margin-top:48px;max-width:960px;font-size:14px;line-height:1.6;color:#c8d4e4}
+.tk h2{font-size:20px;color:#F8F7F3;margin-bottom:12px}
+.tk .g{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px}
+.tk b{color:#F8F7F3;display:block;margin-bottom:4px}
+.sw2{display:inline-block;width:14px;height:14px;border-radius:4px;vertical-align:-2px;margin-right:6px;border:1px solid #ffffff55}
+</style>
+</head>
+<body>
+
+<h1>MeuPet+ — Protótipo de telas</h1>
+<div class="sub">Wireframe de média fidelidade · hoje = 05/11/2026 · cada tela indica o endpoint e para onde navega</div>
+
+<div class="flow">
+
+<section><div class="ph">
+<div class="sb lt"></div>
+<div class="bd ctr" style="background:#F8F7F3; align-items:center; text-align:center; padding:20px;">
+
+    <img
+        src="logo.png"
+        alt="Logo MeuPet+"
+        style="width:190px; height:auto; margin-bottom:-20px;"
+    >
+
+    <p style="
+        font-size:16px;
+        color:#0B2852;
+        font-weight:700;
+        line-height:1.4;
+        margin:0;
+        max-width:290px;
+    ">
+        Amor, cuidado e carinho em cada patinha.
+    </p>
+
+</div>
+</div><h3>1. Splash</h3><p class="n">Tela rápida de carregamento: verifica se há sessão salva. Com sessão vai para a Home; sem sessão, para o Login.</p></section>
+
+<section>
+<div class="ph">
+<div class="sb"></div>
+
+<div class="bd" style="justify-content:center; gap:14px">
+
+    <!-- Logo centralizada -->
+    <div style="display:flex; justify-content:center; margin-bottom:8px;">
+        <img 
+            src="logo.png"
+            alt="MeuPet+"
+            style="width:135px; height:auto; object-fit:contain;"
+        >
+    </div>
+
+    <!-- Título -->
+    <div>
+        <div class="t" style="font-size:22px">
+            Bem-vindo de volta
+        </div>
+        <div class="lb" style="margin-top:4px;font-weight:400">
+            Entre para cuidar da saúde dos seus pets
+        </div>
+    </div>
+
+    <!-- E-mail -->
+    <div class="fl">
+        E-mail
+        <div class="in">
+            <i class="mi">mail</i>ana@email.com
+        </div>
+    </div>
+
+    <!-- Senha -->
+    <div class="fl">
+        Senha
+        <div class="in">
+            <i class="mi">lock</i>••••••••
+        </div>
+    </div>
+
+    <div class="bt">Entrar</div>
+
+</div>
+</div>
+
+<h3>2. Login</h3>
+<p class="n">
+POST /auth/login. Erro aparece abaixo do botão, sem mexer no layout. Vai para a Home. Usa o usuário de teste do mock.
+</p>
+</section>
+
+<section><div class="ph">
+<div class="sb"></div>
+<div class="bd"><div class="t">Meus pets</div>
+<div class="cd"><div class="av"><i class="mi">pets</i></div><div><b>Thor</b><small>Cachorro · Golden · 2 anos</small><span class="ch wn"><i class="mi">schedule</i>Vacina vence em breve</span></div></div>
+<div class="cd"><div class="av"><i class="mi">pets</i></div><div><b>Luna</b><small>Gato · SRD · 8 meses</small><span class="ch ok"><i class="mi">check_circle</i>Tudo em dia</span></div></div>
+</div>
+<div class="fab"><i class="mi">add</i></div>
+<div class="nav" data-on="h"></div>
+</div><h3>3. Home — Meus pets</h3><p class="n">GET /pets. O chip mostra qual pet precisa de atenção. Toque no card abre o Resumo do pet; "+" abre o cadastro de pet.</p></section>
+
+<section><div class="ph">
+<div class="sb"></div>
+<div class="bd"><div class="lb">Carregando</div>
+<div class="cd"><div class="av" style="border-color:var(--ln)"></div><div style="flex:1;display:flex;flex-direction:column;gap:8px"><div class="sk" style="width:50%"></div><div class="sk" style="width:80%"></div></div></div>
+<div class="lb">Lista vazia</div>
+<div class="cd ctr" style="gap:6px;padding:16px"><i class="mi">pets</i><b>Nenhum pet cadastrado</b><small>Cadastre o primeiro para acompanhar vacinas, consultas e peso.</small><div class="bt dk" style="width:100%;margin-top:6px">Cadastrar pet</div></div>
+<div class="lb">Erro</div>
+<div class="cd ctr" style="gap:6px;padding:16px"><i class="mi" style="color:var(--err)">cloud_off</i><b>Não foi possível carregar</b><small>Verifique a conexão e tente de novo.</small><div class="bt out" style="width:100%;margin-top:6px">Tentar novamente</div></div>
+</div>
+<div class="nav" data-on="h"></div>
+</div><h3>4. Estados da lista</h3><p class="n">Mesmos três estados para Vacinas, Consultas e Peso: carregando (skeleton), vazio (convite para agir) e erro (o que houve e como resolver).</p></section>
+
+<section><div class="ph">
+<div class="sb"></div>
+<div class="top"><i class="mi">arrow_back</i><b>Thor</b></div>
+<div class="bd">
+<div class="cd"><div class="av" style="width:56px;height:56px"><i class="mi" style="font-size:30px">pets</i></div><div><b style="font-size:18px">Thor</b><small>Golden Retriever · 2 anos · 28,4 kg</small></div></div>
+<div class="tabs" data-on="0"></div>
+<div class="cd"><div class="ic"><i class="mi">vaccines</i></div><div><b>Próxima vacina</b><small>V10 — vence em 15 dias (20/11)</small></div></div>
+<div class="cd"><div class="ic"><i class="mi">medical_services</i></div><div><b>Última consulta</b><small>Rotina — há 3 meses (05/08)</small></div></div>
+<div class="cd"><div class="ic"><i class="mi">monitor_weight</i></div><div><b>Peso</b><small>28,4 kg · estável nos últimos 2 meses</small></div></div>
+</div>
+<div class="nav" data-on="h"></div>
+</div><h3>5. Detalhe do pet — Resumo</h3><p class="n">GET /pets/:id e resumos. Responde: a vacina está em dia? Quando foi a última consulta? Como está o peso? As abas levam às listas.</p></section>
+
+<section><div class="ph">
+<div class="sb"></div>
+<div class="top"><i class="mi">arrow_back</i><b>Thor</b></div>
+<div class="bd t0"><div class="tabs" data-on="1"></div>
+<div class="cd" style="margin-top:14px"><div class="ic"><i class="mi">vaccines</i></div><div><b>V10</b><small>Aplicada em 20/11/2025 · próxima em 20/11/2026</small><span class="ch wn"><i class="mi">schedule</i>Vence em 15 dias</span></div></div>
+<div class="cd"><div class="ic"><i class="mi">vaccines</i></div><div><b>Antirrábica</b><small>Aplicada em 15/03/2026 · reforço em 15/03/2027</small><span class="ch ok"><i class="mi">check_circle</i>Em dia</span></div></div>
+<div class="cd"><div class="ic"><i class="mi">vaccines</i></div><div><b>Gripe</b><small>Aplicada em 01/08/2026 · reforço em 01/08/2027</small><span class="ch ok"><i class="mi">check_circle</i>Em dia</span></div></div>
+</div>
+<div class="fab"><i class="mi">add</i></div>
+<div class="nav" data-on="h"></div>
+</div><h3>6. Aba Vacinas</h3><p class="n">GET /pets/:id/vaccines. Ordenada pela próxima data. O status (em dia, vence em breve, vencida) é calculado no app. "+" abre o formulário de vacina.</p></section>
+
+<section><div class="ph">
+<div class="sb"></div>
+<div class="top"><i class="mi">arrow_back</i><b>Thor</b></div>
+<div class="bd t0"><div class="tabs" data-on="2"></div>
+<div class="cd" style="margin-top:14px"><div class="ic"><i class="mi">medical_services</i></div><div><b>Rotina</b><small>05/08/2026 · Dra. Paula Lima</small><small>Check-up anual, sem alterações.</small></div></div>
+<div class="cd"><div class="ic"><i class="mi">medical_services</i></div><div><b>Dermatite</b><small>12/02/2026 · Dr. Rafael Costa</small><small>Pomada por 10 dias, retorno em 20 dias.</small></div></div>
+</div>
+<div class="fab"><i class="mi">add</i></div>
+<div class="nav" data-on="h"></div>
+</div><h3>7. Aba Consultas</h3><p class="n">GET /pets/:id/consultations. Lista por data, da mais recente para a mais antiga. "+" abre o formulário de consulta (mesmo padrão do de vacina).</p></section>
+
+<section><div class="ph">
+<div class="sb"></div>
+<div class="top"><i class="mi">arrow_back</i><b>Thor</b></div>
+<div class="bd t0"><div class="tabs" data-on="3"></div>
+<div class="cd" style="margin-top:14px;justify-content:space-between"><div><div class="big">28,4 kg</div><small>Último registro · 02/11/2026</small></div><span class="ch ok"><i class="mi">trending_up</i>+1,2 kg desde março</span></div>
+<div class="cd" style="padding:8px"><svg viewBox="0 0 270 120" width="100%"><g stroke="#e3dfd3"><line x1="34" y1="95" x2="262" y2="95"/><line x1="34" y1="42" x2="262" y2="42"/></g><g font-size="11" fill="#5d6677" font-family="Inter"><text x="2" y="99">27 kg</text><text x="2" y="46">28 kg</text><text x="50" y="114">mar</text><text x="115" y="114">jun</text><text x="170" y="114">set</text><text x="225" y="114">nov</text></g><polyline points="60,84 125,47 180,36 240,20" fill="none" stroke="#102D59" stroke-width="2.5" stroke-linejoin="round"/><g fill="#FF9100" stroke="#fff" stroke-width="2"><circle cx="60" cy="84" r="5"/><circle cx="125" cy="47" r="5"/><circle cx="180" cy="36" r="5"/><circle cx="240" cy="20" r="5"/></g></svg></div>
+<div class="cd"><div class="ic"><i class="mi">monitor_weight</i></div><div><b>Histórico</b><small>02/11 — 28,4 kg</small><small>12/09 — 28,1 kg</small><small>15/06 — 27,9 kg</small></div></div>
+</div>
+<div class="fab"><i class="mi">add</i></div>
+<div class="nav" data-on="h"></div>
+</div><h3>8. Aba Peso</h3><p class="n">GET /pets/:id/weights. Gráfico de linha com datas e kg, mais a variação entre o primeiro e o último registro. "+" abre o formulário de peso.</p></section>
+
+<section><div class="ph">
+<div class="sb"></div>
+<div class="top"><i class="mi">arrow_back</i><b>Nova vacina</b></div>
+<div class="bd">
+<div class="fl">Nome da vacina<div class="in"><i class="mi">vaccines</i>Ex.: V10</div></div>
+<div class="fl">Data de aplicação<div class="in"><i class="mi">calendar_month</i>dd/mm/aaaa</div></div>
+<div class="fl">Próxima dose<div class="in"><i class="mi">event_repeat</i>dd/mm/aaaa</div></div>
+<div class="fl">Veterinário (opcional)<div class="in"><i class="mi">person</i>Nome do profissional</div></div>
+<div class="fl">Observações (opcional)<div class="in" style="height:70px;align-items:flex-start;padding-top:10px"><i class="mi">notes</i>Escreva aqui</div></div>
+</div>
+<div class="ft"><div class="bt">Salvar vacina</div></div>
+</div><h3>9. Formulário — Nova vacina</h3><p class="n">POST /pets/:id/vaccines. Valida no app e mostra o erro 422 da API no campo. Ao salvar, volta para a aba Vacinas. Consulta e peso seguem o mesmo padrão.</p></section>
+
+<section><div class="ph">
+<div class="sb"></div>
+<div class="top"><i class="mi">arrow_back</i><b>Novo pet</b></div>
+<div class="bd">
+<div class="fl">Nome<div class="in"><i class="mi">pets</i>Ex.: Thor</div></div>
+<div class="fl">Espécie<div class="seg"><div class="on"><i class="mi">check</i>Cachorro</div><div>Gato</div></div></div>
+<div class="fl">Raça<div class="in"><i class="mi">category</i>Ex.: Golden Retriever</div></div>
+<div class="fl">Data de nascimento<div class="in"><i class="mi">cake</i>dd/mm/aaaa</div></div>
+</div>
+<div class="ft"><div class="bt">Salvar pet</div></div>
+</div><h3>10. Formulário — Novo pet</h3><p class="n">POST /pets. Aberto pelo "+" da Home. Ao salvar, volta para a lista com o novo pet.</p></section>
+
+<section><div class="ph">
+<div class="sb"></div>
+<div class="top"><b>Perfil</b></div>
+<div class="bd">
+<div class="cd"><div class="av"><i class="mi">person</i></div><div><b>Ana Souza</b><small>ana@email.com</small></div></div>
+<div class="cd"><div class="ic"><i class="mi">notifications_active</i></div>Lembretes de vacina<div class="sw"></div></div>
+<div class="cd"><div class="ic"><i class="mi">dark_mode</i></div>Tema escuro<div class="sw off"></div></div>
+</div>
+<div class="ft"><div class="bt out"><i class="mi">logout</i>Sair</div></div>
+<div class="nav" data-on="p"></div>
+</div><h3>11. Perfil</h3><p class="n">GET /me. "Sair" chama POST /auth/logout, limpa a sessão e volta ao Login. Lembretes e tema são ajustes locais do app.</p></section>
+
+</div>
+
+<div class="tk"><h2>Decisões do protótipo (para a apresentação)</h2>
+<ul style="margin-left:20px;margin-bottom:40px">
+<li><b style="display:inline">Identidade:</b> azul-marinho passa confiança; o laranja marca as ações (botão principal, "+", aba e ícone ativos).</li>
+<li><b style="display:inline">Uma barra por tela:</b> a marca aparece em Splash, Login e Home; nas telas internas, a barra mostra voltar e título.</li>
+<li><b style="display:inline">Uma ação por contexto:</b> "+" flutuante para adicionar; formulários têm só "Salvar" no rodapé.</li>
+<li><b style="display:inline">Navegação inferior:</b> só Início e Perfil, e só nas telas logadas. O resto fica dentro do detalhe do pet.</li>
+<li><b style="display:inline">Status calculado no app:</b> a API manda as datas e o app decide em dia, vence em breve ou vencida.</li>
+<li><b style="display:inline">Estados de lista:</b> carregando, vazio e erro previstos desde o protótipo.</li>
+</ul>
+
+<h2>Tokens do design system (base para o Flutter)</h2>
+<div class="g">
+<div><b>Cores</b>
+<span class="sw2" style="background:#102D59"></span>colorPrimary #102D59<br>
+<span class="sw2" style="background:#FF9100"></span>colorAccent #FF9100<br>
+<span class="sw2" style="background:#F8F7F3"></span>colorBackground #F8F7F3<br>
+<span class="sw2" style="background:#FFFFFF"></span>colorSurface #FFFFFF<br>
+<span class="sw2" style="background:#1d2433"></span>colorText #1D2433<br>
+<span class="sw2" style="background:#5d6677"></span>colorTextMuted #5D6677<br>
+<span class="sw2" style="background:#E3DFD3"></span>colorBorder #E3DFD3</div>
+<div><b>Status</b>
+<span class="sw2" style="background:#2E9E5B"></span>statusOk — texto #1E7A44, fundo #E4F5EC<br>
+<span class="sw2" style="background:#FF9100"></span>statusWarning — texto #A85A00, fundo #FFF1DA<br>
+<span class="sw2" style="background:#D32F2F"></span>statusError — texto #B3261E, fundo #FDE6E6<br>
+<span style="font-size:12px">Vencida = statusError (ainda não aparece nas telas)</span></div>
+<div><b>Tipografia</b>
+Títulos: Poppins 700 — titleLg 22, titleMd 18, titleSm 16<br>
+Texto: Inter 400/600 — body 14, label 12, caption 12<br>
+Mínimo de 12 px em qualquer texto</div>
+<div><b>Espaçamento (múltiplos de 4)</b>
+spacingXs 4 · spacingSm 8 · spacingMd 12 · spacingLg 14 · spacingXl 24<br>
+Alvo de toque mínimo: 44 px</div>
+<div><b>Raio e elevação</b>
+radiusSm 10 (campos) · radiusMd 12 (cards e botões) · radiusFull 999 (chips e avatar)<br>
+elevationFab: 0 4 10 rgba(16,45,89,.35)</div>
+<div><b>Componentes previstos</b>
+AppTopBar, BottomNav, PetCard, StatusChip, InfoCard, TabBar, TextFieldLabeled, SegmentedControl, PrimaryButton, OutlinedButton, SwitchTile, Fab, EmptyState, ErrorState, SkeletonCard, WeightChart</div>
+</div>
+</div>
+
+<script>
+document.querySelectorAll('.sb').forEach(e=>e.innerHTML='<b>9:41</b><span><i class="mi">signal_cellular_alt</i><i class="mi">wifi</i><i class="mi">battery_full</i></span>');
+document.querySelectorAll('.nav').forEach(e=>{const o=e.dataset.on;e.innerHTML='<div class="ni '+(o=='h'?'on':'')+'"><i class="mi">home</i>Início</div><div class="ni '+(o=='p'?'on':'')+'"><i class="mi">person</i>Perfil</div>'});
+document.querySelectorAll('.tabs').forEach(e=>{const a=+e.dataset.on;e.innerHTML=['Resumo','Vacinas','Consultas','Peso'].map((t,i)=>'<div class="tab '+(i==a?'on':'')+'">'+t+'</div>').join('')});
+</script>
+</body>
+</html>
