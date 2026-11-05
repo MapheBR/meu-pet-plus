@@ -80,11 +80,11 @@ abstract final class AppTheme {
         ),
         border: OutlineInputBorder(
           borderRadius: AppRadius.smAll,
-          borderSide: const BorderSide(color: Color(0xFFD8D4C8)),
+          borderSide: const BorderSide(color: AppColors.fieldBorder),
         ),
         enabledBorder: OutlineInputBorder(
           borderRadius: AppRadius.smAll,
-          borderSide: const BorderSide(color: Color(0xFFD8D4C8)),
+          borderSide: const BorderSide(color: AppColors.fieldBorder),
         ),
         focusedBorder: OutlineInputBorder(
           borderRadius: AppRadius.smAll,
@@ -102,14 +102,14 @@ abstract final class AppTheme {
           color: p.onSurfaceMuted,
         ),
         hintStyle: AppTypography.bodyMedium.copyWith(
-          color: const Color(0xFF8A93A3),
+          color: const Color(0xFF8A90A0),
         ),
       ),
 
       // Primário: azul-marinho com texto branco.
       filledButtonTheme: FilledButtonThemeData(
         style: FilledButton.styleFrom(
-          minimumSize: const Size.fromHeight(46),
+          minimumSize: const Size.fromHeight(48),
           backgroundColor: p.primary,
           foregroundColor: p.onPrimary,
           shape: const RoundedRectangleBorder(borderRadius: AppRadius.mdAll),
@@ -119,7 +119,7 @@ abstract final class AppTheme {
       // Accent: laranja com texto azul-marinho (regra do protótipo).
       elevatedButtonTheme: ElevatedButtonThemeData(
         style: ElevatedButton.styleFrom(
-          minimumSize: const Size.fromHeight(46),
+          minimumSize: const Size.fromHeight(48),
           backgroundColor: p.accent,
           foregroundColor: p.onAccent,
           elevation: 0,
@@ -130,7 +130,7 @@ abstract final class AppTheme {
       // Secundário/contorno: branco com borda e texto azul-marinho.
       outlinedButtonTheme: OutlinedButtonThemeData(
         style: OutlinedButton.styleFrom(
-          minimumSize: const Size.fromHeight(46),
+          minimumSize: const Size.fromHeight(48),
           backgroundColor: p.surface,
           foregroundColor: p.primary,
           side: BorderSide(color: p.primary),
@@ -171,13 +171,11 @@ abstract final class AppTheme {
       ),
 
       switchTheme: SwitchThemeData(
-        thumbColor: WidgetStateProperty.resolveWith(
-          (states) =>
-              states.contains(WidgetState.selected) ? p.onAccent : p.surface,
-        ),
+        thumbColor: const WidgetStatePropertyAll(Colors.white),
         trackColor: WidgetStateProperty.resolveWith(
-          (states) =>
-              states.contains(WidgetState.selected) ? p.accent : p.outline,
+          (states) => states.contains(WidgetState.selected)
+              ? p.accent
+              : AppColors.switchOff,
         ),
       ),
 

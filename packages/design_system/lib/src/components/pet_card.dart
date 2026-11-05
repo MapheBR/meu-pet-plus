@@ -6,7 +6,7 @@ import '../tokens/app_typography.dart';
 import 'app_avatar.dart';
 
 /// Card de pet na Home: avatar, nome, resumo (espécie/raça/idade)
-/// e [StatusChip] de saúde à direita.
+/// e [StatusChip] de saúde abaixo do resumo, como no protótipo.
 class PetCard extends StatelessWidget {
   const PetCard({
     required this.name,
@@ -58,11 +58,11 @@ class PetCard extends StatelessWidget {
                         color: scheme.onSurfaceVariant,
                       ),
                     ),
+                    const SizedBox(height: 6),
+                    status,
                   ],
                 ),
               ),
-              const SizedBox(width: AppSpacing.xs),
-              status,
             ],
           ),
         ),

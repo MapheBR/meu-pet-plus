@@ -25,9 +25,9 @@ class AppAvatar extends StatelessWidget {
       width: size,
       height: size,
       decoration: BoxDecoration(
-        color: imagePath == null ? scheme.primaryContainer : scheme.surface,
+        color: imagePath == null ? Colors.white : scheme.surface,
         shape: BoxShape.circle,
-        border: Border.all(color: AppColors.navy.withValues(alpha: .25)),
+        border: Border.all(color: AppColors.orange, width: 2),
       ),
       clipBehavior: Clip.antiAlias,
       child: imagePath != null

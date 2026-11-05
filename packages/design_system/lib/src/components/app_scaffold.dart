@@ -122,7 +122,7 @@ class AppScaffold extends StatelessWidget {
           : null,
       title: Text(
         title ?? '',
-        style: AppTypography.titleMedium.copyWith(color: scheme.onSurface),
+        style: AppTypography.titleMedium.copyWith(color: scheme.onPrimary),
         overflow: TextOverflow.ellipsis,
       ),
       actions: actions,

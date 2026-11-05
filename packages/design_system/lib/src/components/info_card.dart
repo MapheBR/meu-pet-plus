@@ -36,13 +36,13 @@ class InfoCard extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Container(
-          width: 36,
-          height: 36,
+          width: 40,
+          height: 40,
           decoration: BoxDecoration(
             color: highlighted ? Colors.white : scheme.primaryContainer,
-            borderRadius: BorderRadius.circular(AppRadius.sm),
+            borderRadius: BorderRadius.circular(AppRadius.md),
           ),
-          child: Icon(icon, size: 19, color: scheme.primary),
+          child: Icon(icon, size: 20, color: scheme.primary),
         ),
         const SizedBox(width: AppSpacing.sm),
         Expanded(

@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../tokens/app_colors.dart';
+
 /// Bottom navigation do MeuPet+: só dois destinos (Início e Perfil),
 /// como no app de referência. Ícone fica laranja quando ativo.
 ///
@@ -75,7 +77,8 @@ class _NavItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final scheme = Theme.of(context).colorScheme;
-    final color = selected ? scheme.primary : scheme.onSurfaceVariant;
+    final iconColor = selected ? AppColors.orange : scheme.onSurfaceVariant;
+    final labelColor = selected ? scheme.primary : scheme.onSurfaceVariant;
     return Expanded(
       child: InkWell(
         onTap: onTap,
@@ -84,12 +87,12 @@ class _NavItem extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Icon(selected ? activeIcon : icon, size: 24, color: color),
+              Icon(selected ? activeIcon : icon, size: 24, color: iconColor),
               const SizedBox(height: 3),
               Text(
                 label,
                 style: Theme.of(context).textTheme.labelSmall?.copyWith(
-                  color: selected ? scheme.primary : scheme.onSurfaceVariant,
+                  color: labelColor,
                   fontWeight: selected ? FontWeight.w700 : FontWeight.w400,
                 ),
               ),

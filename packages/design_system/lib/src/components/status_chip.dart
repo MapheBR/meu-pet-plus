@@ -42,29 +42,17 @@ class StatusChip extends StatelessWidget {
 
     // Regra do protótipo: texto laranja só sobre fundo azul-marinho.
     // Sobre fundo claro, o laranja aparece só no ícone/borda.
-    final (fg, bg, bd, iconColor) = switch (status) {
-      AppStatus.ok => (
-        semantic.ok,
-        AppColors.okBg,
-        AppColors.okGreen.withValues(alpha: .4),
-        semantic.ok,
-      ),
+    final (fg, bg, iconColor) = switch (status) {
+      AppStatus.ok => (semantic.ok, AppColors.okBg, semantic.ok),
       AppStatus.warning => (
         AppColors.warnText,
         AppColors.warnBg,
         AppColors.orange,
-        AppColors.orange,
       ),
-      AppStatus.error => (
-        semantic.error,
-        AppColors.errBg,
-        AppColors.errRed.withValues(alpha: .4),
-        semantic.error,
-      ),
+      AppStatus.error => (semantic.error, AppColors.errBg, semantic.error),
       AppStatus.neutral => (
         scheme.onSurface,
         scheme.surface,
-        scheme.outline,
         semantic.muted,
       ),
     };
@@ -75,7 +63,6 @@ class StatusChip extends StatelessWidget {
       decoration: BoxDecoration(
         color: bg,
         borderRadius: BorderRadius.circular(999),
-        border: Border.all(color: bd),
       ),
       child: Row(
         mainAxisSize: MainAxisSize.min,

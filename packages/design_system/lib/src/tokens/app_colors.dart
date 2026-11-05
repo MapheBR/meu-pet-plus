@@ -55,13 +55,17 @@ abstract final class AppColors {
   static const Color orange = Color(0xFFFF9100);
   static const Color offWhite = Color(0xFFF8F7F3);
 
-  // Status de vacina.
+  // Status de vacina (hex exatos do protótipo telas.html).
   static const Color okGreen = Color(0xFF1E7A44);
-  static const Color okBg = Color(0xFFE8F5EC);
-  static const Color warnText = Color(0xFF8A5200);
-  static const Color warnBg = Color(0xFFFFF4E0);
-  static const Color errRed = Color(0xFFC62828);
-  static const Color errBg = Color(0xFFFDECEA);
+  static const Color okBg = Color(0xFFE4F5EC);
+  static const Color warnText = Color(0xFFA85A00);
+  static const Color warnBg = Color(0xFFFFF1DA);
+  static const Color errRed = Color(0xFFB3261E);
+  static const Color errBg = Color(0xFFFDE6E6);
+
+  // Borda dos campos de texto e cinza do switch desligado.
+  static const Color fieldBorder = Color(0xFFD3CFC2);
+  static const Color switchOff = Color(0xFFC9CCD4);
 
   static const AppColorPalette light = AppColorPalette(
     primary: navy,
@@ -74,7 +78,7 @@ abstract final class AppColors {
     surface: Color(0xFFFFFFFF),
     surfaceVariant: Color(0xFFEEF3FA), // azul bem claro (avatar, ícone tile)
     onSurface: Color(0xFF1D2433),
-    onSurfaceMuted: Color(0xFF5B6472),
+    onSurfaceMuted: Color(0xFF5D6677),
     outline: Color(0xFFE3DFD3),
     ok: okGreen,
     warning: warnText,

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../tokens/app_colors.dart';
 import '../tokens/app_radius.dart';
 import '../tokens/app_spacing.dart';
 import '../tokens/app_typography.dart';
@@ -57,15 +58,15 @@ class AppTextField extends StatelessWidget {
             hintText: hint,
             prefixIcon: icon == null
                 ? null
-                : Icon(icon, size: 20, color: theme.hintColor),
+                : Icon(icon, size: 20, color: theme.colorScheme.primary),
             suffixIcon: suffixIcon,
             border: OutlineInputBorder(
               borderRadius: AppRadius.smAll,
-              borderSide: const BorderSide(color: Color(0xFFD8D4C8)),
+              borderSide: const BorderSide(color: AppColors.fieldBorder),
             ),
             enabledBorder: OutlineInputBorder(
               borderRadius: AppRadius.smAll,
-              borderSide: const BorderSide(color: Color(0xFFD8D4C8)),
+              borderSide: const BorderSide(color: AppColors.fieldBorder),
             ),
             focusedBorder: OutlineInputBorder(
               borderRadius: AppRadius.smAll,
@@ -122,7 +123,7 @@ class AppChoiceChips extends StatelessWidget {
                     border: Border.all(
                       color: i == selectedIndex
                           ? scheme.primary
-                          : const Color(0xFFD8D4C8),
+                          : AppColors.fieldBorder,
                       width: i == selectedIndex ? 1.5 : 1,
                     ),
                   ),
