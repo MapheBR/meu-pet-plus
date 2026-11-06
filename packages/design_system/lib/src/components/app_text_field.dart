@@ -23,6 +23,10 @@ class AppTextField extends StatelessWidget {
     this.onChanged,
     this.enabled = true,
     this.suffixIcon,
+    this.readOnly = false,
+    this.onTap,
+    this.errorText,
+    this.textCapitalization = TextCapitalization.none,
   });
 
   final String label;
@@ -36,6 +40,15 @@ class AppTextField extends StatelessWidget {
   final ValueChanged<String>? onChanged;
   final bool enabled;
   final Widget? suffixIcon;
+
+  /// Campo somente-leitura com toque (ex.: abre um date picker).
+  final bool readOnly;
+  final VoidCallback? onTap;
+
+  /// Mensagem de erro exibida abaixo do campo (vem do servidor ou da
+  /// validação local — o 422 da API aponta o campo em `fields`).
+  final String? errorText;
+  final TextCapitalization textCapitalization;
 
   @override
   Widget build(BuildContext context) {
@@ -53,6 +66,9 @@ class AppTextField extends StatelessWidget {
           validator: validator,
           onChanged: onChanged,
           enabled: enabled,
+          readOnly: readOnly,
+          onTap: onTap,
+          textCapitalization: textCapitalization,
           style: theme.textTheme.bodyMedium,
           decoration: InputDecoration(
             hintText: hint,
@@ -78,6 +94,10 @@ class AppTextField extends StatelessWidget {
             contentPadding: const EdgeInsets.symmetric(
               horizontal: AppSpacing.md,
               vertical: AppSpacing.sm,
+            ),
+            errorText: errorText,
+            errorStyle: AppTypography.bodySmall.copyWith(
+              color: theme.colorScheme.error,
             ),
           ),
         ),

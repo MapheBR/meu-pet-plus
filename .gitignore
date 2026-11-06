@@ -1,3 +1,29 @@
+# IDE
 .idea/
+.vscode/
+*.iml
+
+# Dart/Flutter
 .dart_tool/
 build/
+.packages
+.flutter-plugins
+.flutter-plugins-dependencies
+.pub-cache/
+.pub/
+
+# Plataformas geradas (código-fonte fica, build não)
+**/build/
+**/.dart_tool/
+
+# Server mock
+server/.dart_tool/
+server/build/
+server/server.log
+
+# Android local
+**/local.properties
+
+# OS
+.DS_Store
+Thumbs.db

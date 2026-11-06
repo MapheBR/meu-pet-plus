@@ -1,0 +1,32 @@
+/// Domain, data and formatting of the MeuPet+ app. Pure Dart.
+library;
+
+export 'src/api/api_client.dart';
+export 'src/format/date_x.dart';
+export 'src/format/parse_list.dart';
+export 'src/format/vaccine_status.dart';
+export 'src/format/validators.dart';
+export 'src/models/consultation.dart';
+export 'src/models/json.dart';
+export 'src/models/pet.dart';
+export 'src/models/session.dart';
+export 'src/models/species.dart';
+export 'src/models/user.dart';
+export 'src/models/vaccine.dart';
+export 'src/models/weight_record.dart';
+export 'src/repositories/auth_repository.dart';
+export 'src/repositories/consultation_repository.dart';
+export 'src/repositories/pet_repository.dart';
+export 'src/repositories/remote/remote_auth_repository.dart';
+export 'src/repositories/remote/remote_consultation_repository.dart';
+export 'src/repositories/remote/remote_pet_repository.dart';
+export 'src/repositories/remote/remote_user_repository.dart';
+export 'src/repositories/remote/remote_vaccine_repository.dart';
+export 'src/repositories/remote/remote_weight_repository.dart';
+export 'src/repositories/user_repository.dart';
+export 'src/repositories/vaccine_repository.dart';
+export 'src/repositories/weight_repository.dart';
+export 'src/result/app_error.dart';
+export 'src/result/result.dart';
+export 'src/storage/in_memory_session_storage.dart';
+export 'src/storage/session_storage.dart';
